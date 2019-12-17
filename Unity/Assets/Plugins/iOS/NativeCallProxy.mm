@@ -14,6 +14,14 @@ id<NativeCallsProtocol> api = NULL;
 
 
 extern "C" {
-    void showHostMainWindow(const char* color) { return [api showHostMainWindow:[NSString stringWithUTF8String:color]]; }
+    void showHostMainWindow() { return [api showHostMainWindow]; }
+    void _TestLibrary_FirstAction()
+     {
+         [api showHostMainWindow];
+     }
+
+     void _TestLibrary_SecondAction()
+     {
+     }
 }
 
